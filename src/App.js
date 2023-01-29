@@ -1,10 +1,28 @@
 import { ChakraProvider, extendTheme, Text  } from '@chakra-ui/react'
 import AppLayout from './layout/AppLayout';
 import theme from './theme';
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react';
+import { fetchStudents } from './pages/students-page/slice/studentsSlice'; 
+import useFetchStudents from './hooks/useFetchStudents';
 
 const customTheme = extendTheme(theme)
 
 function App() {
+
+ const dispatch = useDispatch()
+ const {data} = useFetchStudents();
+
+  useEffect(() => {
+    if (data.students){
+      if (data.students.length > 0){
+        dispatch(fetchStudents({
+          payload: data.students
+        }))
+      }
+    }
+  }, [dispatch, data])
+
   return (
     <ChakraProvider theme={customTheme}>
       <AppLayout>
