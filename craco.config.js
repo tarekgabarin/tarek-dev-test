@@ -15,6 +15,7 @@ module.exports = {
   },
   devServer: (devServerConfig, { env, paths }) => {
     devServerConfig = {
+      historyApiFallback: true,
       onBeforeSetupMiddleware: undefined,
       onAfterSetupMiddleware: undefined,
       setupMiddlewares: (middlewares, devServer) => {
