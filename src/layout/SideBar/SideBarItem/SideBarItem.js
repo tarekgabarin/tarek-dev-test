@@ -1,13 +1,14 @@
 import {
   Flex,
-  Icon
+  Icon,
 } from '@chakra-ui/react';
 
 import { Link } from 'react-router-dom';
 
-const SideBarItem = ({ icon, children, linkTo, ...rest }) => {
+const SideBarItem = ({ icon, name, children, linkTo, ...rest }) => {
   return (
     <Link to={linkTo}>
+
       <Flex
         align="center"
         transition="all 0.3s"
@@ -33,7 +34,7 @@ const SideBarItem = ({ icon, children, linkTo, ...rest }) => {
             as={icon}
           />
         )}
-        {children}
+        {name}
       </Flex>
     </Link>
   );

@@ -2,7 +2,8 @@ import {
   Box,
   CloseButton,
   Flex,
-  Text
+  Text,
+  VStack
 } from '@chakra-ui/react';
 
 import {
@@ -42,11 +43,14 @@ const SidebarContent = ({ onClose, ...rest }) => {
         </Text>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
-      {linkItems.map((link) => (
-        <SideBarItem key={link.name} linkTo={link.linkTo} icon={link.icon}>
-          {link.name}
-        </SideBarItem>
-      ))}
+
+      <VStack align='stretch'>
+        {linkItems.map((link) => (
+          <SideBarItem key={link.name} name={link.name} linkTo={link.linkTo} icon={link.icon}>
+          </SideBarItem>
+        ))}
+      </VStack>
+
     </Box>
   );
 };
