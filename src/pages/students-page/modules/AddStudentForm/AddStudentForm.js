@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux'
 import { useState } from "react";
 import { SingleDatepicker } from "chakra-dayzed-datepicker";
 import { addStudent } from "../../slice/studentsSlice";
+import { toast } from 'react-toastify';
 
 const AddStudentForm = () => {
 
@@ -43,6 +44,9 @@ const AddStudentForm = () => {
       }, 3000)
     }).then(formData => {
       dispatch(addStudent(formData))
+      toast.success("Added Student!", {
+        position: toast.POSITION.BOTTOM_RIGHT
+      });
     })
   }
 

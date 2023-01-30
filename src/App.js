@@ -7,7 +7,8 @@ import { fetchStudents } from './pages/students-page/slice/studentsSlice';
 import useFetchStudents from './hooks/useFetchStudents';
 import HomePage from './pages/home-page/HomePage';
 import StudentsPage from './pages/students-page/StudentPage';
-
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import {
   BrowserRouter as Router,
   Routes,
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <ChakraProvider theme={customTheme}>
+      <ToastContainer />
       <Router>
         <AppLayout>
           <Routes>

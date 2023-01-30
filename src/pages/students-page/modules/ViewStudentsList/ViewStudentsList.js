@@ -26,9 +26,9 @@ const ViewStudentsList = () => {
                 </Thead>
                 <Tbody>
                     {
-                        listOfStudents.map(student => {
+                        listOfStudents.map((student, i) => {
                             return (
-                                <Tr>
+                                <Tr key={i}>
                                     <Td>{student.firstName}</Td>
                                     <Td>{student.familyName}</Td>
                                     <Td>{student.dateOfBirth}</Td>
