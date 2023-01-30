@@ -24,9 +24,7 @@ function App() {
   useEffect(() => {
     if (data.students) {
       if (data.students.length > 0) {
-        dispatch(fetchStudents({
-          payload: data.students
-        }))
+        dispatch(fetchStudents(data.students))
       }
     }
   }, [dispatch, data])

@@ -15,8 +15,12 @@ const studentsSlice = createSlice({
       },
       addStudent(state, action) {
         let newStudentObj = action.payload
-        let newStudentsArr = state.listOfStudents;
-        newStudentsArr.push(newStudentObj)
+        let newStudentsArr = [...state.listOfStudents];
+        let newStudent = {
+          id: newStudentsArr.length + 1,
+          ...newStudentObj
+        }
+        newStudentsArr.push(newStudent)
         return {
             ...state,
             listOfStudents: newStudentsArr
@@ -25,9 +29,6 @@ const studentsSlice = createSlice({
     },
   })
   
-  // Extract the action creators object and the reducer
   const { actions, reducer } = studentsSlice
-  // Extract and export each action creator by name
   export const { fetchStudents,  addStudent} = actions
-  // Export the reducer, either as a default or named export
   export default reducer
