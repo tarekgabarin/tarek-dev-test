@@ -1,15 +1,11 @@
 import {
-  Flex,
-  Icon,
-} from '@chakra-ui/react';
+    Flex,
+    Icon,
+  } from '@chakra-ui/react';
 
-import { Link } from 'react-router-dom';
-
-const SideBarItem = ({ icon, children, linkTo, ...rest }) => {
-  return (
-    <Link to={linkTo}>
-
-      <Flex
+  const CustomButton = ({icon, children, ...rest}) => {
+    return (
+        <Flex
         align="center"
         transition="all 0.3s"
         p="3"
@@ -36,8 +32,7 @@ const SideBarItem = ({ icon, children, linkTo, ...rest }) => {
         )}
         {children}
       </Flex>
-    </Link>
-  );
-};
+    )
+  }
 
-export default SideBarItem
+  export default CustomButton

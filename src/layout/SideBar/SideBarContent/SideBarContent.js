@@ -46,7 +46,8 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
       <VStack align='stretch'>
         {linkItems.map((link) => (
-          <SideBarItem key={link.name} name={link.name} linkTo={link.linkTo} icon={link.icon}>
+          <SideBarItem key={link.name}  linkTo={link.linkTo} icon={link.icon}>
+            {link.name}
           </SideBarItem>
         ))}
       </VStack>

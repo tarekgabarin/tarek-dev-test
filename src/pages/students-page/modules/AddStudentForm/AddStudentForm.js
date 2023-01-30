@@ -4,7 +4,7 @@ import {
   FormLabel,
   FormControl,
   Input,
-  Button,
+ // Button,
   VStack
 } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux'
@@ -12,6 +12,7 @@ import { useState } from "react";
 import { SingleDatepicker } from "chakra-dayzed-datepicker";
 import { addStudent } from "../../slice/studentsSlice";
 import { toast } from 'react-toastify';
+import CustomButton from "../../../../components/CustomButton";
 
 const AddStudentForm = () => {
 
@@ -98,9 +99,9 @@ const AddStudentForm = () => {
 
         </FormControl>
 
-        <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
+        <CustomButton colorScheme='teal' isLoading={isSubmitting} type='submit'>
           Submit
-        </Button>
+        </CustomButton>
 
       </VStack>
 
