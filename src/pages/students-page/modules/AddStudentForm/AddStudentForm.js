@@ -60,7 +60,7 @@ const AddStudentForm = () => {
           <FormLabel htmlFor='firstName'>First name</FormLabel>
           <Input
             id='firstName'
-            placeholder='name'
+            placeholder='John'
             {...register('firstName', {
               required: 'This is required'
             })}
@@ -76,7 +76,7 @@ const AddStudentForm = () => {
           <FormLabel htmlFor='familyName'>Last name</FormLabel>
           <Input
             id='familyName'
-            placeholder='name'
+            placeholder='Doe'
             {...register('familyName', {
               required: 'This is required'
             })}

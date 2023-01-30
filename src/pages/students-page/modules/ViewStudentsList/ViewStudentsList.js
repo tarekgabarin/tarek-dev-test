@@ -16,7 +16,7 @@ const ViewStudentsList = () => {
 
     return (
         <TableContainer>
-            <Table variant='striped' colorScheme='teal'>
+            <Table variant='striped' colorScheme='primary'>
                 <Thead>
                     <Tr>
                         <Th>First Name</Th>

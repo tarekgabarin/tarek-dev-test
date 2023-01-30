@@ -1,10 +1,11 @@
 /*eslint-disable */
+import { Text } from '@chakra-ui/react'
 
 const HomePage = () => {
 
     return (
         <div>
-            Home
+            <Text mb={2} fontSize='5xl'>Home</Text>
         </div>
     )
 
