@@ -4,7 +4,7 @@ import {
   FormLabel,
   FormControl,
   Input,
- // Button,
+  Button,
   VStack
 } from '@chakra-ui/react'
 import { useDispatch } from 'react-redux'
@@ -12,13 +12,12 @@ import { useState } from "react";
 import { SingleDatepicker } from "chakra-dayzed-datepicker";
 import { addStudent } from "../../slice/studentsSlice";
 import { toast } from 'react-toastify';
-import CustomButton from "../../../../components/CustomButton";
 
 const AddStudentForm = () => {
 
   const dispatch = useDispatch()
 
-  function getMinDate(){
+  function getMinDate() {
     var minYear = new Date().getFullYear() - 10;
     return `01/01/${minYear}`
   }
@@ -99,9 +98,16 @@ const AddStudentForm = () => {
 
         </FormControl>
 
-        <CustomButton colorScheme='teal' isLoading={isSubmitting} type='submit'>
+
+
+        <Button
+          width={"100%"}
+          _hover={{
+            bg: 'secondary.200',
+            color: 'black',
+          }} color={"white"} backgroundColor={"secondary.300"} isLoading={isSubmitting} type='submit'>
           Submit
-        </CustomButton>
+        </Button>
 
       </VStack>
 

@@ -12,8 +12,8 @@ const SideBarItem = ({ icon, children, linkTo, ...rest }) => {
       <Flex
         align="center"
         transition="all 0.3s"
-        p="3"
-        mx="5"
+        p="2"
+        mx="7"
         backgroundColor={"secondary.300"}
         color={"white"}
         borderRadius="lg"
